@@ -13,6 +13,9 @@ module.exports = {
           100: "#e2e2d5",
           200: "#888883",
         },
+        overlay: {
+          default: "rgba(0,0,0,0.3)",
+        },
       },
       fontFamily: {
         body: ["Nunito"], // will generate class name: font-body
@@ -39,6 +42,7 @@ module.exports = {
         48: "12rem",
         56: "14rem",
         64: "16rem",
+        "1/2": "50%",
       },
     },
     namedGroups: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], // For nested groups

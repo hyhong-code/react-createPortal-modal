@@ -1,13 +1,30 @@
+import { useState } from "react";
+
+import Modal from "./Modal";
+
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="container mx-auto">
-      <div className="">
-        <button className="px-8 py-4 border border-gray-800 block mx-auto rounded-full">
+      {/* Stacking context 1 */}
+      <div className="relative z-10">
+        {/* Open Modal Button */}
+        <button
+          onClick={setIsOpen.bind(this, true)}
+          className="px-8 py-4 border border-gray-800 block mx-auto rounded-full"
+        >
           Open Modal
         </button>
+
+        {/* Modal */}
+        <Modal open={isOpen} onClose={setIsOpen.bind(this, false)}>
+          Hello
+        </Modal>
       </div>
 
-      <p>
+      {/* Stacking context 2 */}
+      <p className="relative z-20 bg-gray-100">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
         accusantium similique repudiandae dignissimos, dolorem adipisci, soluta
         eum cupiditate illo asperiores modi dolorum est officiis labore quia
