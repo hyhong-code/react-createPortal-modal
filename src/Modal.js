@@ -7,6 +7,7 @@ const Modal = ({ children, open, onClose }) => {
     <AnimatePresence>
       {open && (
         <Fragment>
+          {/* Back drop overlay */}
           <motion.div
             variants={{
               hidden: { opacity: 0 },
@@ -19,8 +20,9 @@ const Modal = ({ children, open, onClose }) => {
             onClick={onClose}
             className="fixed z-50 left-0 right-0 top-0 bottom-0 bg-overlay"
           />
+
+          {/* Modal content */}
           <motion.div
-            onClick={onClose}
             variants={{
               hidden: { opacity: 0 },
               visible: { opacity: 1 },

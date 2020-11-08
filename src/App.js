@@ -8,7 +8,10 @@ const App = () => {
   return (
     <div className="container mx-auto">
       {/* Stacking context 1 */}
-      <div className="relative z-10">
+      <div
+        className="relative z-10"
+        onClick={(evt) => console.log(evt.target, evt.currentTarget)}
+      >
         {/* Open Modal Button */}
         <button
           onClick={setIsOpen.bind(this, true)}
